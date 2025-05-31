@@ -1,0 +1,23 @@
+# app2-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app2
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      containers:
+      - name: app2
+        image: hashicorp/http-echo
+        args:
+        - "-text=Hello vishal from my kubernetes App2"
+        ports:
+        - containerPort: 5678
+
