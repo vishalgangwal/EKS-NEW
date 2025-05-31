@@ -17,7 +17,7 @@ spec:
       - name: app1
         image: hashicorp/http-echo
         args:
-        - "-text=Hello vishal from my kubernetes deployment App1 This is vishal CICD................."
+        - "-text=Hello vishal from my kubernetes deployment App1 This is vishal CICD.................ROLE"
         ports:
         - containerPort: 5678
 
